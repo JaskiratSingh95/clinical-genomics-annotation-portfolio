@@ -1,0 +1,72 @@
+{
+  "generated_utc": "2026-08-23T21:48:48.295071+00:00",
+  "input": "data/processed/full_variants_canonical.csv",
+  "source_records": 67290,
+  "allele_level_records": 16977,
+  "allele_build_level_records": 33645,
+  "tests": [
+    {
+      "test": "gene_symbol \u00d7 clinical_significance",
+      "analysis_unit": "One row per upstream AlleleID, preferring GRCh38 and then the defined source-file priority",
+      "n": 16977,
+      "contingency_table": {
+        "BRCA1": {
+          "-": 2071,
+          "Benign": 698,
+          "Benign/Likely benign": 72,
+          "Conflicting classifications of pathogenicity": 1174,
+          "Likely benign": 1066,
+          "Likely pathogenic": 167,
+          "Other / rare source values": 1,
+          "Pathogenic": 2904,
+          "Pathogenic/Likely pathogenic": 172,
+          "Uncertain significance": 784,
+          "not provided": 22
+        },
+        "BRCA2": {
+          "-": 0,
+          "Benign": 735,
+          "Benign/Likely benign": 83,
+          "Conflicting classifications of pathogenicity": 1865,
+          "Likely benign": 1034,
+          "Likely pathogenic": 87,
+          "Other / rare source values": 0,
+          "Pathogenic": 3261,
+          "Pathogenic/Likely pathogenic": 153,
+          "Uncertain significance": 626,
+          "not provided": 2
+        }
+      },
+      "chi_square": 2228.1966768189604,
+      "degrees_freedom": 10,
+      "p_value": 0.0,
+      "cramers_v": 0.3622816080457877,
+      "cells_with_expected_count_below_5": 2,
+      "assumption_note": "Rare source-value categories were collapsed before testing. The test concerns source-data composition, not independent patient observations."
+    },
+    {
+      "test": "gene_symbol \u00d7 assembly",
+      "analysis_unit": "One row per upstream AlleleID and genome-build combination; duplicate source-file copies removed",
+      "n": 33645,
+      "contingency_table": {
+        "BRCA1": {
+          "GRCh37": 8992,
+          "GRCh38": 8968,
+          "na": 136
+        },
+        "BRCA2": {
+          "GRCh37": 7711,
+          "GRCh38": 7704,
+          "na": 134
+        }
+      },
+      "chi_square": 1.2832882425987133,
+      "degrees_freedom": 2,
+      "p_value": 0.5264262036185409,
+      "cramers_v": 0.006175922554291234,
+      "cells_with_expected_count_below_5": 0,
+      "assumption_note": "Rare source-value categories were collapsed before testing. The test concerns source-data composition, not independent patient observations."
+    }
+  ],
+  "global_caveat": "P-values are exploratory source-data diagnostics. The dataset contains repeated upstream representations and is not an independent patient cohort. Neither statistical significance nor non-significance establishes clinical, biological, diagnostic, prognostic, or therapeutic significance."
+}

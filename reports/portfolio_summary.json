@@ -1,0 +1,53 @@
+{
+  "generated_utc": "2026-08-23T21:45:57.727602+00:00",
+  "input_file": "data/processed/full_variants_canonical.csv",
+  "total_source_records": 67290,
+  "unique_upstream_allele_ids": 16977,
+  "source_file_count": 2,
+  "source_file_allele_id_overlap": 16977,
+  "source_summary": [
+    {
+      "source_file": "filtered_mutations.csv",
+      "rows": 33645,
+      "unique_allele_ids": 16977
+    },
+    {
+      "source_file": "pathogenic_mutations.csv",
+      "rows": 33645,
+      "unique_allele_ids": 16977
+    }
+  ],
+  "clinical_significance_source_field": {
+    "filtered_mutations.csv": {
+      "Pathogenic": 12110,
+      "Conflicting classifications of pathogenicity": 6078,
+      "Likely benign": 4197,
+      "-": 4142,
+      "Benign": 2852
+    },
+    "pathogenic_mutations.csv": {
+      "Pathogenic": 12110,
+      "Conflicting classifications of pathogenicity": 6078,
+      "Likely benign": 4197,
+      "-": 4142,
+      "Benign": 2852
+    }
+  },
+  "assembly_distribution": {
+    "filtered_mutations.csv": {
+      "GRCh37": 16703,
+      "GRCh38": 16672,
+      "na": 270
+    },
+    "pathogenic_mutations.csv": {
+      "GRCh37": 16703,
+      "GRCh38": 16672,
+      "na": 270
+    }
+  },
+  "top_gene_symbol_source_counts": {
+    "BRCA2": 31098,
+    "BRCA1": 36192
+  },
+  "interpretation_boundary": "All values are descriptive summaries of public, upstream source fields. No clinical validity, classification, diagnosis, or treatment inference is made."
+}
